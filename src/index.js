@@ -5,8 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux'
-import lightReducer from './lightReducer';
-// import { from } from 'rxjs';
+import lightReducer from './reducers/lightReducer';
 
 // This `store` contains the entire state of the application.
 // You can send requests in the form of `actions` through your components to the `lightReducer`.

@@ -1,5 +1,6 @@
-import React from 'react'
-import { connect } from 'react-redux'
+import React from 'react';
+import { connect } from 'react-redux';
+import { switchAction } from '../actions/CoreActions';
 
 /**
  * Selects the part of the data from the store that this connected component needs. 
@@ -7,7 +8,7 @@ import { connect } from 'react-redux'
  * access the current state and any method for dispatching actions from the store.
  * @param {*} state  the entire Redux store state; the same value returned by a call to `store.getState()`.
  */
-const mapStateToProps = state => ({ light: state })
+const mapStateToProps = state => ({ light: state });
 
 /**
  * Dispatch action to the store.
@@ -17,8 +18,8 @@ const mapStateToProps = state => ({ light: state })
  * @param {*} dispatch recieved from react . Use it to dispatch actions.
  */
 const mapDispatchToProps = dispatch => ({
-  onSwitch: () => dispatch({ type: "SWITCH" })
-})
+  onSwitch: () => dispatch(switchAction)
+});
 
 /**
  * A React component with a button to trigger a state change and a placeholder to 
@@ -33,4 +34,4 @@ const LightComponent = ({ light, onSwitch }) => (
   </div>
 );
 
-export default connect(mapStateToProps, mapDispatchToProps)(LightComponent)
+export default connect(mapStateToProps, mapDispatchToProps)(LightComponent);

@@ -1,3 +1,4 @@
+import { actionTypes } from "../actions/actionTypes";
 
 /**
  * Reads the message carried by the `action` and update the state accordingly.
@@ -7,11 +8,11 @@
  *  a redux action or a payload. 
  */
 const lightReducer = (state = "on", action) => {
-  if (action.type === "SWITCH") {
+  if (action.type === actionTypes.switch) {
     return state === "on" ? "off" : "on"
   }
 
-  return state
+  return state;
 }
 
-export default lightReducer
+export default lightReducer;

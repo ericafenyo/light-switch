@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import LightContainer from './LightContainer';
+import LightContainer from './components/LightContainer';
 
 const appStyle = { width: "100px", margin: "48px auto", textAlign: "center" };
 
