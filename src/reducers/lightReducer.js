@@ -1,4 +1,4 @@
-import { actionTypes } from "../actions/actionTypes";
+import { actionTypes } from "../actions/CoreActions";
 
 /**
  * Reads the message carried by the `action` and update the state accordingly.
